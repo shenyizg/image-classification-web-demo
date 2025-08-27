@@ -27,6 +27,9 @@ model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet18', pretrained=True).ev
 # Use Local file labels.txt here
 response = open("labels.txt", "r")
 labels = [line.strip() for line in response.readlines()]
+# # English version
+# response = requests.get("https://git.io/JJkYN")
+# labels = response.text.split("\n")
 
 config = Config(
   access_key_id=os.environ.get('ALIBABA_CLOUD_ACCESS_KEY_ID'),
